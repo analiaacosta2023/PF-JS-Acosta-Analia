@@ -467,6 +467,7 @@ class GestionarProductos {
 
         const addSubtotal = document.querySelector("#subtotal1");
         addSubtotal.innerHTML = "$ "+ subtotal;
+        totalObject.subtotal = subtotal
 
     }
 
