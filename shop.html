@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fontawesome.css">
+    <link rel="stylesheet" href="./css/brands.css">
+    <link rel="stylesheet" href="./css/solid.css">
+    <title>Ana Random Store</title>
+
+</head>
+
+<body>
+    <section id="header">
+        <a href="index.html"><img src="./img/logo.jpg" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a class="active" href="shop.html">PRODUCTOS</a></li>
+                <li><a href="about.html">NOSOTROS</a></li>
+                <li><a href="contact.html">CONTACTO</a></li>
+                <a href="#" id="close"><i class="fa-sharp fa-solid fa-square-xmark" style="color: #000000;"></i></a>
+            </ul>
+        </div>
+        <div id="lg-bag">
+            <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i>
+            <span id="badgeCarrito">0</span>
+        </div>
+        <div id="mobile">
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+
+        <div class="offcanvas">
+            <a href="#" id="close2"><i class="fa-sharp fa-solid fa-square-xmark" style="color: #000000;"></i></a>
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">Tu pedido</h5>
+            </div>
+            <div class="offcanvas-body">
+
+                <div id="idCarrito">
+
+                    <table>
+
+                        <tbody id="cart-products">
+                        </tbody>
+
+                    </table>
+
+                </div>
+                <div id="coupon">
+                    <div class="coupon-box">
+                        <input type="text" placeholder="#cupon" id="desc-input">
+                        <button class="normal" id="desc-button">Aplicar descuento</button>
+                    </div>
+
+                    <div class="coupon-box">
+                        <input type="text" placeholder="Código postal" id="envio-input">
+                        <button class="normal" id="shipping-button">Calcular envío</button>
+                    </div>
+
+                </div>
+
+                <div id="subtotal">
+                    <table>
+                        <tr>
+                            <td>Subtotal</td>
+                            <td id="subtotal1">$ 0</td>
+                        </tr>
+                        <tr>
+                            <td>Descuento</td>
+                            <td id="descuento">Sin descuento</td>
+                        </tr>
+                        <tr>
+                            <td>Envío</td>
+                            <td id="envio">A calcular</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total</strong></td>
+                            <td><strong id="total">$ 0</strong></td>
+                        </tr>
+                    </table>
+                    <div id="botones">
+                        <button class="normal">Finalizar compra</button>
+                        <button class="grey">Seguir comprando</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+    <section id="page-header">
+        <div id="box-descuento">
+          <h2>Ana Random Store</h2>
+        <h3>MES DEL AMIGO<br>20% OFF CON EL CUPÓN AMIGOS2023<br>ENVÍO GRATIS EN COMPRAS SUPERIORES A $200</h3>  
+        </div>
+        
+    </section>
+
+    <section id="product1" class="section-p1">
+
+        <div id="headerProductos">
+            TODOS LOS PRODUCTOS
+        </div>
+
+        <div class="pro-container" id="productos">
+
+        </div>
+
+    </section>
+
+    <section id="pagination" class="section-p1">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+    </section>
+
+    <section id="newsletter" class="section-p1">
+        <div class="newstext">
+            <h4>Registrate</h4>
+            <p>Recibí un email con las novedades y <span>ofertas especiales</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="ejemplo@123.com">
+            <button class="normal">Subscribe</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="./img/logo.jpg" alt="">
+            <h4>Contacto</h4>
+            <p><strong>Dirección:</strong> calle número, ciudad, país</p>
+            <p><strong>Teléfono:</strong> +54 11 9999 9999</p>
+            <p><strong>Horarios de atención:</strong> 9:00 a 21:00 hs</p>
+            <div class="follow">
+                <h4>Seguinos</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>Sobre</h4>
+            <a href="about.html">Nosotros</a>
+            <a href="#">Envíos</a>
+            <a href="#">Política de privacidad</a>
+            <a href="#">Términos y condiciones</a>
+            <a href="contact.html">Contacto</a>
+        </div>
+        <div class="col">
+            <h4>Mi cuenta</h4>
+            <a href="#">Ingresar</a>
+            <a href="cart.html">Ver carrito</a>
+            <a href="#">Mi lista de deseos</a>
+            <a href="#">Mis órdenes</a>
+            <a href="#">Ayuda</a>
+        </div>
+        <div class="col install">
+            <p>Medios de pago seguros</p>
+            <div class="cards">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png"
+                    alt="">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png"
+                    alt="">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png"
+                    alt="">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/diners@2x.png"
+                    alt="">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/paypal@2x.png"
+                    alt="">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png"
+                    alt="">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-naranja@2x.png"
+                    alt="">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-shopping@2x.png"
+                    alt="">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png"
+                    alt="">
+                <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/argencard@2x.png"
+                    alt="">
+            </div>
+        </div>
+        <div class="copyright">
+            <p>COPYRIGHT ANA RANDOM STORE - 2023. TODOS LOS DERECHOS RESERVADOS.</p>
+        </div>
+    </footer>
+    <script src="./js/responsive.js"></script>
+    <script src="./js/clases/Producto.js"></script>
+    <script src="./js/clases/GestionarProductos.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
