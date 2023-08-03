@@ -97,10 +97,10 @@
 
     <section id="page-header">
         <div id="box-descuento">
-          <h2>Ana Random Store</h2>
-        <h3>MES DEL AMIGO<br>20% OFF CON EL CUPÓN AMIGOS2023<br>ENVÍO GRATIS EN COMPRAS SUPERIORES A $200</h3>  
+            <h2>Ana Random Store</h2>
+            <h3>MES DEL AMIGO<br>20% OFF CON EL CUPÓN AMIGOS2023<br>ENVÍO GRATIS EN COMPRAS SUPERIORES A $200</h3>
         </div>
-        
+
     </section>
 
     <section id="product1" class="section-p1">
@@ -133,13 +133,18 @@
     </section>
 
     <footer class="section-p1">
+
         <div class="col">
-            <img class="logo" src="./img/logo.jpg" alt="">
-            <h4>Contacto</h4>
-            <p><strong>Dirección:</strong> calle número, ciudad, país</p>
-            <p><strong>Teléfono:</strong> +54 11 9999 9999</p>
-            <p><strong>Horarios de atención:</strong> 9:00 a 21:00 hs</p>
-            <div class="follow">
+
+            <div class="titulo">
+                <h4>Contacto</h4>
+                <a href="javascript:openAccordion(1)"><i class="fa-solid fa-chevron-down"></i></a>
+            </div>
+
+            <div class="desplegable mobile-not-show" id="accordion-1">
+                <p><strong>Dirección:</strong> calle número, ciudad, país</p>
+                <p><strong>Teléfono:</strong> +54 11 9999 9999</p>
+                <p><strong>Horarios de atención:</strong> 9:00 a 21:00 hs</p>
                 <h4>Seguinos</h4>
                 <div class="icon">
                     <i class="fab fa-facebook-f"></i>
@@ -149,25 +154,48 @@
                     <i class="fab fa-youtube"></i>
                 </div>
             </div>
+
         </div>
+
         <div class="col">
-            <h4>Sobre</h4>
-            <a href="about.html">Nosotros</a>
-            <a href="#">Envíos</a>
-            <a href="#">Política de privacidad</a>
-            <a href="#">Términos y condiciones</a>
-            <a href="contact.html">Contacto</a>
+
+            <div class="titulo">
+                <h4>Sobre</h4>
+                <a href="javascript:openAccordion(2)"><i class="fa-solid fa-chevron-down"></i></a>
+            </div>
+
+            <div class="desplegable mobile-not-show" id="accordion-2">
+                <a href="#">Nosotros</a>
+                <a href="#">Envíos</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Contacto</a>
+            </div>
         </div>
+
         <div class="col">
-            <h4>Mi cuenta</h4>
-            <a href="#">Ingresar</a>
-            <a href="cart.html">Ver carrito</a>
-            <a href="#">Mi lista de deseos</a>
-            <a href="#">Mis órdenes</a>
-            <a href="#">Ayuda</a>
+
+            <div class="titulo">
+                <h4>Mi cuenta</h4>
+                <a href="javascript:openAccordion(3)"><i class="fa-solid fa-chevron-down"></i></a>
+            </div>
+
+            <div class="desplegable mobile-not-show" id="accordion-3">
+                <a href="#">Ingresar</a>
+                <a href="#">Ver carrito</a>
+                <a href="#">Mi lista de deseos</a>
+                <a href="#">Mis órdenes</a>
+                <a href="#">Ayuda</a>
+            </div>
+
         </div>
-        <div class="col install">
-            <p>Medios de pago seguros</p>
+
+        <div class="pagos">
+
+            <div class="titulo">
+                <h4>Medios de pago seguros</h4>
+            </div>
+
             <div class="cards">
                 <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png"
                     alt="">
@@ -190,7 +218,9 @@
                 <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/argencard@2x.png"
                     alt="">
             </div>
+
         </div>
+
         <div class="copyright">
             <p>COPYRIGHT ANA RANDOM STORE - 2023. TODOS LOS DERECHOS RESERVADOS.</p>
         </div>

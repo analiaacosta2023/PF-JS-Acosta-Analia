@@ -44,4 +44,12 @@ if (close2) {
     })
 }
 
+/* codigo para el accordion footer */
+
+function openAccordion(id) {
+    const accordionOpen = document.querySelector(`#accordion-${id}`)
+    accordionOpen.classList.toggle('mobile-not-show')
+}
+
+
 
