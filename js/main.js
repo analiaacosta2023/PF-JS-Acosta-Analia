@@ -1,5 +1,11 @@
 let productos = new Array();
 
+// Por el boton mostrar mas
+let productosVisibles = 8;
+
+// div donde se cargan los productos (solo en shop.html)
+const divProductos = document.querySelector("#productos");
+
 let gestor;
 
 let carrito = [];
@@ -20,14 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     gestor = new GestionarProductos();
-    gestor.iniciar();
+
+    // Los productos solo se cargan en shop.html, el carrito en todas las paginas
+    if (divProductos) {
+        gestor.iniciar();
+    }
 
     if (carritoGuardado) {
+
         carrito = JSON.parse(carritoGuardado)
-        gestor.actualizarCarrito();
+        gestor.actualizarCarrito();    
     }
     totalCarrito();
-
 })
 
 function addCarrito(id) {
@@ -60,10 +70,11 @@ function aplicarDescuento() {
     const discountCode = discountInput.value.trim();
 
     if (discountCode != "AMIGOS2023") {
-        alert("Codigo de descuento invalido");
+        showErrorToast("Codigo de descuento invalido");
 
     } else {
         descuentoAplicado = true
+        showSuccessToast("Descuento aplicado")
         totalCarrito();
     }
 }
@@ -89,9 +100,10 @@ function aplicarEnvio() {
     const postalCode = parseInt(shippingInput.value.trim());
 
     if (postalCode < 9999 && postalCode > 0) {
+        showSuccessToast("Envío calculado")
         totalObject.envio = 10;
     } else {
-        alert("Codigo postal invalido");
+        showErrorToast("Codigo postal invalido");
     }
 
     totalCarrito();
@@ -118,4 +130,21 @@ function totalCarrito() {
     const totalElement = document.querySelector("#total");
     totalElement.innerHTML = "$ " + total;
 }
+
+const showMoreBtn = document.getElementById("showMoreBtn");
+if (showMoreBtn) {
+    showMoreBtn.addEventListener("click", mostrarMasProductos);
+}
+
+function mostrarMasProductos() {
+    productosVisibles += 4;
+
+    gestor.cargarProductos(productos);
+
+
+    if (productosVisibles >= productos.length) {
+        showMoreBtn.style.display = "none";
+    }
+}
+
 

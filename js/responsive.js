@@ -48,7 +48,42 @@ if (close2) {
 
 function openAccordion(id) {
     const accordionOpen = document.querySelector(`#accordion-${id}`)
-    accordionOpen.classList.toggle('mobile-not-show')
+    accordionOpen.classList.toggle('mobile-not-show');
+
+    const iconElement = document.querySelector(`[href="javascript:openAccordion(${id})"] i`);
+  if (accordionOpen.classList.contains('mobile-not-show')) {
+    iconElement.classList.replace('fa-chevron-up', 'fa-chevron-down');
+  } else {
+    iconElement.classList.replace('fa-chevron-down', 'fa-chevron-up');
+  }
+}
+
+// Toastify
+
+function showSuccessToast(mensaje) {
+    Toastify({
+        text: mensaje,
+        duration: 3000,
+        gravity: "top",
+        position: "right",
+        close: true,
+        style: {
+            background: "green",
+          },
+    }).showToast();
+}
+
+function showErrorToast(mensaje) {
+    Toastify({
+        text: mensaje,
+        duration: 3000,
+        gravity: "top",
+        position: "right",
+        close: true,
+        style: {
+            background: "red",
+          },
+    }).showToast();
 }
 
 

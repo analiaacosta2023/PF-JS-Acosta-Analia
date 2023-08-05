@@ -330,7 +330,6 @@ class GestionarProductos {
 
     cargarProductos(productos) {
 
-        const divProductos = document.querySelector("#productos");
         divProductos.innerHTML = "";
 
         if (productos.length === 0) {
@@ -340,7 +339,9 @@ class GestionarProductos {
 
         } else {
 
-            productos.forEach((producto) => {
+            const productosACargar = productos.slice(0, productosVisibles);
+
+            productosACargar.forEach((producto) => {
 
                 const { id, coleccion, nombre, precio, link_foto, descripcion } = producto
 
@@ -371,7 +372,6 @@ class GestionarProductos {
 
     mostrarHeader(msg) {
 
-
         const headerProductos = document.querySelector("#headerProductos");
         headerProductos.innerHTML = msg;
 
@@ -398,7 +398,7 @@ class GestionarProductos {
         }
 
         this.actualizarCarrito();
-
+        offcanvas.classList.add('active')
     }
 
     actualizarCarrito() {
@@ -440,6 +440,16 @@ class GestionarProductos {
 
     mostrarCarrito() {
 
+        const fullCart = document.getElementById("offcanvas-body");
+        const emptyCart = document.getElementById("empty-cart");
+        if (carrito.length === 0) {
+            fullCart.style.display = "none";
+            emptyCart.style.display = "flex";
+            return
+        }
+        fullCart.style.display = "block";
+        emptyCart.style.display = "none";
+
         let detalleCarrito = document.querySelector("#cart-products");
         detalleCarrito.innerHTML = "";
         let subtotal = 0;
@@ -466,13 +476,13 @@ class GestionarProductos {
         })
 
         const addSubtotal = document.querySelector("#subtotal1");
-        addSubtotal.innerHTML = "$ "+ subtotal;
+        addSubtotal.innerHTML = "$ " + subtotal;
         totalObject.subtotal = subtotal
 
     }
 
     eliminarProducto(id) {
-            carrito = carrito.filter(articulo => articulo.id != id);
-            this.actualizarCarrito();
+        carrito = carrito.filter(articulo => articulo.id != id);
+        this.actualizarCarrito();
     }
 }
