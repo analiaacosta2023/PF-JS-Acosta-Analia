@@ -186,10 +186,9 @@ function handleCheckout() {
     const carrito = JSON.parse(localStorage.getItem(key_carrito));
 
     const order = { carrito: carrito, total: totalObject }
-    console.log(order)
 
     localStorage.setItem(key_order, JSON.stringify(order))
-    debugger
+
     redirectToCheckout();
     gestor.vaciarCarrito();
 

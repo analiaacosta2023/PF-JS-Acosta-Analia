@@ -15,6 +15,7 @@ function handleSubscription() {
         showErrorToast("El campo email es obligatorio")
     } else if (isValidEmail(email)) {
         showSuccessToast("Gracias por suscribirte")
+        emailInput.value = '';
     } else {
         showErrorToast("Email inválido")
     }
