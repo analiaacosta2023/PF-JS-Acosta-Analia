@@ -1,30 +1,32 @@
-// Boton de redireccion al shop
-
-const goToShopBtn = document.getElementById("goToShopBtn");
-goToShopBtn.addEventListener("click", redirectToShopPage);
-
-function redirectToShopPage() {
-    const shopPageUrl = "shop.html";
-    window.location.href = shopPageUrl;
-}
-
 // Boton de suscripcion
 
 const subscribeBtn = document.getElementById("subscribeBtn");
-subscribeBtn.addEventListener("click", handleSubscription);
 
+// El botón de suscripción no aparece en shop ni en checkout, por eso se checkea primero que esté
+if (subscribeBtn) {
+    subscribeBtn.addEventListener("click", handleSubscription);
+}
 
 function handleSubscription() {
     const emailInput = document.getElementById("emailInput");
     const email = emailInput.value.trim();
 
-    // validar email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!email || !email.match(emailRegex)) {
-        showErrorToast("Email inválido")
-    } else {
+    if (email === '') {
+        showErrorToast("El campo email es obligatorio")
+    } else if (isValidEmail(email)) {
         showSuccessToast("Gracias por suscribirte")
+    } else {
+        showErrorToast("Email inválido")
     }
 }
 
+// Esta función se reutiliza en formularios contacto y checkout también
+
+function isValidEmail(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email.match(emailPattern)) {
+        return true
+    } else {
+        return false
+    }
+}

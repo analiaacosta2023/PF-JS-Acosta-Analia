@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="./css/solid.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Ana Random Store</title>
-
 </head>
 
 <body>
@@ -20,8 +19,8 @@
         <div>
             <ul id="navbar">
                 <li><a href="index.html">INICIO</a></li>
-                <li><a class="active" href="shop.html">PRODUCTOS</a></li>
-                <li><a href="about.html">NOSOTROS</a></li>
+                <li><a href="shop.html">PRODUCTOS</a></li>
+                <li><a class="active" href="about.html">NOSOTROS</a></li>
                 <li><a href="contact.html">CONTACTO</a></li>
                 <a href="#" id="close"><i class="fa-sharp fa-solid fa-square-xmark" style="color: #000000;"></i></a>
             </ul>
@@ -89,37 +88,45 @@
                         </tr>
                     </table>
                     <div id="botones">
-                        <button class="normal" id="checkout-btn">Finalizar compra</button>
+                        <button class="normal">Finalizar compra</button>
+                        <button class="grey"><a href="shop.html">Seguir comprando</a></button>
                     </div>
                 </div>
             </div>
 
         </div>
 
-
-
     </section>
 
-    <section id="page-header">
-        <div id="box-descuento">
-            <h2>Ana Random Store</h2>
-            <h3>MES DEL AMIGO<br>20% OFF CON EL CUPÓN AMIGOS2023<br>ENVÍO GRATIS EN COMPRAS SUPERIORES A $200</h3>
-        </div>
-
+    <section id="page-header" class="about-header">
+        <h2>Sobre Nosotros</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     </section>
 
-    <section id="product1" class="section-p1">
-
-        <div id="headerProductos">
-            TODOS LOS PRODUCTOS
+    <section id="about-head" class="section-p1">
+        <img src="./img/p26.jpeg" alt="">
+        <div>
+            <h2>Quienes somos</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit fuga voluptatum libero in quisquam ratione
+                nisi beatae! Excepturi temporibus rem cum, maxime sequi in adipisci et asperiores dolore accusantium
+                cumque?</p>
+            <abbr title="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus maiores asperiores rem
+                veritatis unde.</abbr>
+            <br><br>
+            <marquee bgcolor="#e8b9ea" loop="-1" scrollamount="5" width="100%">Lorem ipsum dolor sit amet consectetur
+                adipisicing elit.</marquee>
         </div>
+    </section>
 
-        <div class="pro-container" id="productos">
-
+    <section id="newsletter" class="section-p1">
+        <div class="newstext">
+            <h4>Registrate</h4>
+            <p>Recibí un email con las novedades y <span>ofertas especiales</span></p>
         </div>
-
-        <button class="normal" id="showMoreBtn">MOSTRAR MÁS</button>
-
+        <div class="form">
+            <input id="emailInput" type="text" placeholder="ejemplo@123.com">
+            <button class="normal" id="subscribeBtn">Suscribir</button>
+        </div>
     </section>
 
     <footer class="section-p1">
@@ -215,12 +222,14 @@
             <p>COPYRIGHT ANA RANDOM STORE - 2023. TODOS LOS DERECHOS RESERVADOS.</p>
         </div>
     </footer>
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./js/responsive.js"></script>
     <script src="./js/clases/Producto.js"></script>
     <script src="./js/clases/GestionarProductos.js"></script>
     <script src="./js/main.js"></script>
-
+    <script src="./js/homePage.js"></script>
+    
 </body>
 
 </html>

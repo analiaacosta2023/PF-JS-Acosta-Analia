@@ -1,12 +1,16 @@
 let productos = new Array();
 
+let gestor;
+
+const url = './js/db.json';
+
 // Por el boton mostrar mas
 let productosVisibles = 8;
 
 // div donde se cargan los productos (solo en shop.html)
 const divProductos = document.querySelector("#productos");
 
-let gestor;
+// variables para el carrito
 
 let carrito = [];
 
@@ -20,10 +24,21 @@ let totalObject = {
 
 let descuentoAplicado = false
 
+// variables para checkout
+
+let productosOrdenados = {};
+let totalOrden = {};
+
+const key_order = "order";
+
+const checkoutProducts = document.querySelector(".checkout1");
+
+//Iniciacion de la pagina
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const carritoGuardado = localStorage.getItem(key_carrito);
-
+    const ordenGuardada = localStorage.getItem(key_order);
 
     gestor = new GestionarProductos();
 
@@ -35,10 +50,20 @@ document.addEventListener("DOMContentLoaded", () => {
     if (carritoGuardado) {
 
         carrito = JSON.parse(carritoGuardado)
-        gestor.actualizarCarrito();    
+        gestor.actualizarCarrito();
     }
     totalCarrito();
+
+    
+    if(checkoutProducts && ordenGuardada) {
+
+        productosOrdenados = JSON.parse(ordenGuardada).carrito
+        totalOrden = JSON.parse(ordenGuardada).total
+        showOrder();
+    }
 })
+
+// Carrito
 
 function addCarrito(id) {
 
@@ -131,6 +156,8 @@ function totalCarrito() {
     totalElement.innerHTML = "$ " + total;
 }
 
+// Mostrar mas productos en el shop
+
 const showMoreBtn = document.getElementById("showMoreBtn");
 if (showMoreBtn) {
     showMoreBtn.addEventListener("click", mostrarMasProductos);
@@ -145,6 +172,32 @@ function mostrarMasProductos() {
     if (productosVisibles >= productos.length) {
         showMoreBtn.style.display = "none";
     }
+}
+
+// Para checkout
+
+const checkoutBtn = document.getElementById("checkout-btn");
+if (checkoutBtn) {
+    checkoutBtn.addEventListener("click", handleCheckout);
+}
+
+
+function handleCheckout() {
+    const carrito = JSON.parse(localStorage.getItem(key_carrito));
+
+    const order = { carrito: carrito, total: totalObject }
+    console.log(order)
+
+    localStorage.setItem(key_order, JSON.stringify(order))
+    debugger
+    redirectToCheckout();
+    gestor.vaciarCarrito();
+
+}
+
+function redirectToCheckout() {
+    const checkoutUrl = "checkout.html";
+    window.location.href = checkoutUrl;
 }
 
 

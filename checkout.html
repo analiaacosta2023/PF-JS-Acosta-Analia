@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/fontawesome.css">
     <link rel="stylesheet" href="./css/brands.css">
     <link rel="stylesheet" href="./css/solid.css">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.23/dist/sweetalert2.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Ana Random Store</title>
 
@@ -20,7 +21,7 @@
         <div>
             <ul id="navbar">
                 <li><a href="index.html">INICIO</a></li>
-                <li><a class="active" href="shop.html">PRODUCTOS</a></li>
+                <li><a href="shop.html">PRODUCTOS</a></li>
                 <li><a href="about.html">NOSOTROS</a></li>
                 <li><a href="contact.html">CONTACTO</a></li>
                 <a href="#" id="close"><i class="fa-sharp fa-solid fa-square-xmark" style="color: #000000;"></i></a>
@@ -89,7 +90,7 @@
                         </tr>
                     </table>
                     <div id="botones">
-                        <button class="normal" id="checkout-btn">Finalizar compra</button>
+                        <button class="normal">Finalizar compra</button>
                     </div>
                 </div>
             </div>
@@ -102,25 +103,56 @@
 
     <section id="page-header">
         <div id="box-descuento">
-            <h2>Ana Random Store</h2>
-            <h3>MES DEL AMIGO<br>20% OFF CON EL CUPÓN AMIGOS2023<br>ENVÍO GRATIS EN COMPRAS SUPERIORES A $200</h3>
+            <h2>Finalizar compra</h2>
+        </div>
+    </section>
+
+    <section>
+
+        <div class='checkout-container'>
+            <div class="banner">
+                <h3>1- Revisa tu compra</h3>
+            </div>
+
+            <div class='check'>
+
+                <div class='checkout1'>
+
+                </div>
+
+                <div id="total-orden">
+                </div>
+            </div>
+
+            <div class="banner">
+                <h3>2- Completa tus datos</h3>
+            </div>
+
+            <form id="checkout-form">
+                <div class='checkout-form'>
+                    <h3 class='col3'>Comprador:</h3>
+                    <input class='col3' id='buyer-firstname' placeholder='Nombre' />
+                    <input class='col3' id='buyer-lastname' placeholder='Apellido' />
+                    <input class='col3' id='buyer-email' placeholder='Email' />
+                    <input class='col3' id='buyer-address' placeholder='Dirección' />
+                    <h3 class='col3'>Tarjeta:</h3>
+                    <input class='col3' id='card-name' placeholder='NOMBRE' />
+                    <input class='col2' id='card-number' placeholder='NÚMERO 16 dígitos' />
+                    <input id='card-CVV' placeholder='CVV' />
+                    <h4>Vencimiento:</h4>
+                    <input id='card-EM' placeholder='MM' />
+                    <input id='card-EY' placeholder='AAAA' />
+                </div>
+                <div class='botones'>
+                    <button class="normal" type="submit">COMPLETAR ORDEN</button>
+                    <button class="grey" type="reset">CANCELAR</button>
+                </div>
+            </form>
+
         </div>
 
     </section>
 
-    <section id="product1" class="section-p1">
-
-        <div id="headerProductos">
-            TODOS LOS PRODUCTOS
-        </div>
-
-        <div class="pro-container" id="productos">
-
-        </div>
-
-        <button class="normal" id="showMoreBtn">MOSTRAR MÁS</button>
-
-    </section>
 
     <footer class="section-p1">
 
@@ -216,10 +248,13 @@
         </div>
     </footer>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.23/dist/sweetalert2.all.min.js"></script>
     <script src="./js/responsive.js"></script>
     <script src="./js/clases/Producto.js"></script>
     <script src="./js/clases/GestionarProductos.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/homePage.js"></script>
+    <script src="./js/checkout.js"></script>
 
 </body>
 
