@@ -4,6 +4,8 @@
 Este trabajo se realizó como proyecto final del curso de Javascript de Coderhouse.
 Se programó un simulador de una tienda de suecos ficticia. Ninguno de los productos existen, simplemente son imágenes creadas con inteligencia artificial.
 
+<img src="img/Screenshot 2023-11-02 at 11.42.10.png">
+
 ## Datos generales:
 
 ### Sobre la alumna
@@ -43,12 +45,16 @@ Desde la barra de navegación, presionando en *productos*, o desde el botón *En
 Con el botón *Mostrar más*, se hacen visibles más productos del catálogo.
 Y presionando en el ícono *carrito* de las tarjetas, se agregan los productos al carrito.
 
+<img src="img/Screenshot 2023-11-02 at 11.43.59.png">
+
 ### Nosotros
 Espacio con la descripción de la empresa.
 Y más abajo, nuevamente para adherirte a la newsletter dejando tu email.
 
 ### Contacto
 Lo destacable de esta sección, es el formulario de contacto.
+
+<img src="img/Screenshot 2023-11-02 at 11.44.29.png">
 
 ### Carrito
 Se puede abrir el **carrito** desplegable desde la barra de navegación, o cada vez que se añade un producto.
